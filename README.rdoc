@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a test app. I am excited to start learning Rails.
 
 Things you may want to cover:
 
