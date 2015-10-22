@@ -15,11 +15,9 @@
  */
 * { box-sizing: border-box; }
 
-html,body{
-    height: 100%;
-    margin:0;
-}
-
+ body > .container. {
+  padding-top: 60px;
+ }
 
 
 
@@ -52,12 +50,15 @@ html,body{
   margin-left: 3%;
 
 }
-
+.footer {
+  margin-bottom: 0;
+}
 footer {
   background-color: black;
   height: 65px;
   clear: both;
   position: relative;
+
 }
 footer p {
   padding-top: 20px;
