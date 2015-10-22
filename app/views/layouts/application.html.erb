@@ -2,14 +2,46 @@
 <html>
 <head>
   <title>Nameofapp</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </head>
 <body>
-  hello
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid"><!-- nav container -->  <div class="navbar-brand">
+       <a href="google.com"><img src="<%= asset_path( 'google.png' ) %>" class="nav-image" title="google" > Google</a> 
+      </div>
+      <ul id="nav-ul">
+        <li class="nav-links">Home</li>
+        <li class="nav-links">About</li>
+        <li class="nav-links">Contact</li>
+      </ul>
+    </div>  
+  </nav>
+
+  <h1 id="application_h1">Welcome to Boat Miami</h1>
+  <h2>Your source for Boat rental/purchase in Miami.</h2>
+
 
 <%= yield %>
 
+  <footer>
+
+    <p>&copy; By David Navarro</p>
+      <ul>
+        <li><a href="https://twitter.com/DavidDev007" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @DavidDev007</a></li>
+      </ul>
+
+
+
+ </footer>
 </body>
 </html>
