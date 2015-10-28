@@ -41,6 +41,11 @@ html, body {
 
 }
 
+.nav-links a:visited {
+  color: #ffffff;
+
+}
+
 .navbar-brand { 
   padding:0px;
 

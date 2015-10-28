@@ -21,8 +21,8 @@
             <td><%= product.description %></td>
             <td><%= product.image_url %></td>
             <td><%= link_to 'Show', product, class: 'btn btn-mini btn-default' %></td>
-            <td><%= link_to 'Edit', edit_product_path(product), class: 'btn  btn-mini btn-success btn-edit' %></td>
-            <td><%= link_to 'Destroy', product, method: :delete, class: 'btn btn-mini btn-danger btn-destroy', data: { confirm: 'Are you sure?' } %></td>
+            <td class="btn-override-white"><%= link_to 'Edit', edit_product_path(product), class: 'btn  btn-mini btn-success' %></td>
+            <td class="btn-override-white"><%= link_to 'Destroy', product, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
