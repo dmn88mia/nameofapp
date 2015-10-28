@@ -46,6 +46,11 @@ html, body {
 
 }
 
+.nav-links a {
+  color: #ffffff;
+
+}
+
 .navbar-brand { 
   padding:0px;
 
