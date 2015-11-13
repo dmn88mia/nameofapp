@@ -14,9 +14,9 @@
     <% @products.each do |product| %>
     <div class="item<%= " active" if product == @products.first %>">
       <% if product.image_url.present? %>
-        <%= image_tag("http://www.planwallpaper.com/static/images/images-7_kACPBns.jpg") %>
-      <% else %>
         <%= image_tag(product.image_url) %>
+      <% else %>
+        <%= image_tag("http://www.planwallpaper.com/static/images/images-7_kACPBns.jpg") %>
       <% end %>
       <div class="carousel-caption">
         <%= product.name %>
