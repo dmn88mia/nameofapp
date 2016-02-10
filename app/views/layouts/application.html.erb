@@ -24,19 +24,23 @@
           </div>
         </div>
         <div class="col-md-4"> 
-          <div class="search-form">  
+          <!-- <div class="search-form">  --> 
+          <form class="navbar-form navbar-left" role="search">
+           <div class="form-group search-form">
             <%= form_tag("/products", method: "get") do %>
               <%= label_tag(:q, "Search for:") %>
               <%= text_field_tag(:q) %>
-              <%= submit_tag("Search") %>
+              <%= submit_tag("Search", class: 'btn btn-default') %>
             <% end %>
           </div>
+        </form>
+          <!-- </div> -->
         </div>
         <div class="col-md-6"> 
           <ul id="nav-ul">
-            <li class="nav-links"><%= link_to 'Featured Products', static_pages_landing_page_path %></li>
-            <li class="nav-links"><%= link_to 'About', static_pages_about_path %></li>
-            <li class="nav-links"><%= link_to 'Contact', static_pages_contact_path %></li>
+            <li class="nav-links"><%= link_to 'Featured Products', root_path %></li>
+            <li class="nav-links"><%= link_to 'About', about_path %></li>
+            <li class="nav-links"><%= link_to 'Contact', contact_path %></li>
             <li class="nav-links"><%= link_to 'Index Page', products_path %></li>
             <li class="nav-links"><%= link_to 'New Product', new_product_path %></li>
           </ul>
