@@ -23,6 +23,10 @@
            <a href="google.com"><img src="<%= asset_path( 'google.png' ) %>" class="nav-image" title="google" > Google</a> 
           </div>
         </div>
+        <%#= flash[:notice] %>
+        <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
         <div class="col-md-4"> 
           <!-- <div class="search-form">  --> 
           <form class="navbar-form navbar-left" role="search">
