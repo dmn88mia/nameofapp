@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
 
    get 'index' => 'static_pages#index'
+   post 'static_pages/thank_you' => "static_pages#thank_you", :as => :thank_you
 
   
 
