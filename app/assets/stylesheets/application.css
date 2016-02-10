@@ -35,7 +35,7 @@ html, body {
   text-decoration: none;
   list-style-type: none;
   float: left;
-  margin-top:5%;
+  margin-top:3%;
   padding-left:15px;
   font-size: 1.2em;
 
@@ -52,14 +52,14 @@ html, body {
 }
 
 .navbar-brand { 
-  padding:0px;
+  padding:4px;
 
 }
 .navbar-brand a {
   color:#ffffff;
 }
 .nav-image {
-  width: 8%;
+  width: 20%;
   margin-top: 0.5%;
   margin-left: 3%;
 
@@ -73,6 +73,16 @@ html, body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -4em;
+}
+
+.search-form  {
+  margin-top:3%;
+  float: left;
+  
+
+}
+.search-form label {
+  color:#ffffff;
 }
 
 .footer, .push {

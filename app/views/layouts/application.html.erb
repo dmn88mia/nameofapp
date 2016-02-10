@@ -16,16 +16,32 @@
 </head>
 <body>
   <nav class="navbar navbar-inverse">
-    <div class="container-fluid"><!-- nav container -->  <div class="navbar-brand">
-       <a href="google.com"><img src="<%= asset_path( 'google.png' ) %>" class="nav-image" title="google" > Google</a> 
-      </div>
-      <ul id="nav-ul">
-        <li class="nav-links"><%= link_to 'Featured Products', static_pages_landing_page_path %></li>
-        <li class="nav-links"><%= link_to 'About', static_pages_about_path %></li>
-        <li class="nav-links"><%= link_to 'Contact', static_pages_contact_path %></li>
-        <li class="nav-links"><%= link_to 'Index Page', products_path %></li>
-        <li class="nav-links"><%= link_to 'New Product', new_product_path %></li>
-      </ul>
+    <div class="container-fluid"><!-- nav container --> 
+      <div class="row">
+        <div class="col-md-2"> 
+          <div class="navbar-brand">
+           <a href="google.com"><img src="<%= asset_path( 'google.png' ) %>" class="nav-image" title="google" > Google</a> 
+          </div>
+        </div>
+        <div class="col-md-4"> 
+          <div class="search-form">  
+            <%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search") %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-md-6"> 
+          <ul id="nav-ul">
+            <li class="nav-links"><%= link_to 'Featured Products', static_pages_landing_page_path %></li>
+            <li class="nav-links"><%= link_to 'About', static_pages_about_path %></li>
+            <li class="nav-links"><%= link_to 'Contact', static_pages_contact_path %></li>
+            <li class="nav-links"><%= link_to 'Index Page', products_path %></li>
+            <li class="nav-links"><%= link_to 'New Product', new_product_path %></li>
+          </ul>
+        </div>  
+      </div>  
     </div>  
   </nav>
   <div class="container">
