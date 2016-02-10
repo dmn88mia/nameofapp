@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
    get 'index' => 'static_pages#index'
    post 'static_pages/thank_you' => "static_pages#thank_you", :as => :thank_you
-
+ 
   
 
   # The priority is based upon order of creation: first created -> highest priority.
