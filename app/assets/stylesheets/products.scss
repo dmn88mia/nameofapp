@@ -22,3 +22,43 @@
 .margin-top {
 	margin-top: 5px;
 }
+
+.price-rating-color ul {
+	margin-top: 5%;
+    padding:0;
+
+    li {
+      display: inline;
+      font-size: 2.1em;
+    }
+}
+
+.hr-edit {
+
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+
+}
+
+.background {
+	background-color: #eeeeee;
+	border-radius: 2%;
+	border-style: solid;
+    border-color: #BBBBBB;
+    
+	p {
+	  padding: 5px;
+
+
+	}
+
+}
+
+// temporary height
+.comments {
+	height: 100px;
+}
