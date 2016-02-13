@@ -3,6 +3,7 @@
         <div class="col-md-12">
         <div class="product-reviews">
             <h1 class="heading-family">Comments</h1>
+            <%= will_paginate @comments %>
             <% @comments.each do |comment| %>
 
               <div>
@@ -14,6 +15,7 @@
 
               </div>
             <% end %>
+            <%= will_paginate @comments %>
         </div>
        </div> 
      </div> <!-- end of row 3 -->
