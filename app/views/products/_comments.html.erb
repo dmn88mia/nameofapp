@@ -1,0 +1,19 @@
+     <div class="row">  <!-- begining of row 3 -->
+       <hr class="hr-edit">
+        <div class="col-md-12">
+        <div class="product-reviews">
+            <h1 class="heading-family">Comments</h1>
+            <% @comments.each do |comment| %>
+
+              <div>
+                  <hr>
+                  <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
+                  <div class="rated" data-score="<%= comment.rating %>"></div>
+                  <p><%= comment.body %></p>
+                  <p>By <%= comment.user.first_name %></p>
+
+              </div>
+            <% end %>
+        </div>
+       </div> 
+     </div> <!-- end of row 3 -->

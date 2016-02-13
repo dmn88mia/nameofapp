@@ -23,13 +23,40 @@
 	margin-top: 5px;
 }
 
-.price-rating-color ul {
-	margin-top: 5%;
-    padding:0;
+
+.heading-family {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.price-rating-color {
+
+    p {
+      margin-top: 5%;
+      font-size: 2.1em;
+      color:red;
+    }
+
+    .price-font {
+      color: black;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+
+    ul {
+	  margin-top: 8%;
+      padding:0;
+      }
+
+    .fixed-font {
+      font-size: 1em;
+    }
+
+    .fixed-padding {
+      padding-left: 5%;
+    }
 
     li {
       display: inline;
-      font-size: 2.1em;
+      
     }
 }
 
@@ -49,7 +76,7 @@
 	border-radius: 2%;
 	border-style: solid;
     border-color: #BBBBBB;
-    
+
 	p {
 	  padding: 5px;
 
@@ -60,5 +87,10 @@
 
 // temporary height
 .comments {
-	height: 100px;
+
 }
+
+.rated {
+	display: inline;
+}
+

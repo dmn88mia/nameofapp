@@ -1,10 +1,10 @@
-<div class = "container">
+
     
     <div class="row"> <!-- begining of row 1 -->
         <hr class="hr-edit">
         <div class="col-md-6">
             <div class="product-name">
-              <h2><%= @product.name %></h2>
+              <h2 class="heading-family"><%= @product.name %></h2>
             </div>
             <div class="thumbnail">
               <% if @product.image_url.present? %>
@@ -17,14 +17,14 @@
         
         <div class="col-md-6">
             <div class="price-rating-color">
+              <p><span class="heading-family price-font">Total Price:</span> $<%= @product.price %></p>
               <ul>
-                <li>$<%= @product.price %> |</li>
-                <li>product rating |</li> 
-                <li><%= @product.colour %></li>
+                <li class="fixed-font">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </li> 
+                <li class="fixed-font fixed-padding">Color: <%= @product.colour %></li>
               </ul>
             </div><hr class="hr-edit">
             <div class="description">
-              <h3>Description:</h3>
+              <h3 class="heading-family">Description:</h3>
               <div class="background">
                 <p><%= @product.description %></p>
               </div>
@@ -32,21 +32,10 @@
         </div>    
 
     </div> <!-- end of row 1 -->
-    
-    <div class="row">  <!-- begining of row 1 -->
-        <hr class="hr-edit">
-        <div class="col-md-12">
-          <div class="comments">
-            <h1>Comments</h1>
-               <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
-          </div>
-        </div>
-  
-    </div> <!-- end of row 1 -->
+    <%= render 'new_comment' %>  
+    <%= render 'comments' %>
 
 
-</div> <!-- end of container -->
 
 
 

@@ -1,0 +1,26 @@
+    <div class="row">  <!-- begining of row 2 -->
+        <hr class="hr-edit">
+        <div class="col-md-3">
+          <div class="comments">
+              <% if signed_in? %>
+                <h4>Add a review:</h4>
+                  <%= form_for([@product, @product.comments.build]) do |f| %>
+                  <div class="form-group">
+                    <%= f.label :body, "Comment" %>
+                    <%= f.text_area :body, class: "form-control", placeholder: "Enter Comment" %>
+                  </div>
+                  <%= f.label :rating, "Rating" %>
+                  <div class="rating"></div><br>
+                  <p>
+                    <%= f.submit "submit", class: 'btn btn-defualt btn-primary' %>
+                  </p>
+                  <% end %>
+               <% end %>
+               <%= link_to 'Edit', edit_product_path(@product) %> |
+               <%= link_to 'Back', products_path %>
+          </div>
+        </div>
+  
+    </div> <!-- end of row 2 -->
+
+   
