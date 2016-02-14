@@ -14,11 +14,11 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
-    <div class="item<%= " active" if product == @products.first %>">
+    <div class="adjusted-img-carousel item<%= " active" if product == @products.first %>">
       <% if product.image_url.present? %>
         <%= image_tag(product.image_url) %>
       <% else %>
-        <%= image_tag("http://www.planwallpaper.com/static/images/images-7_kACPBns.jpg") %>
+        <%= image_tag("box_placeholder") %>
       <% end %>
       <div class="carousel-caption">
         <%= product.name %>
