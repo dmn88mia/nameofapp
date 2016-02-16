@@ -16,7 +16,7 @@ describe Product do
       expect(@product.average_rating).to eq(3)
     end
    end
-
+  
   context "product not valid" do
   
     it "is invalid when name is missing" do 
@@ -25,4 +25,4 @@ describe Product do
 
   end 
 
-end
+end  

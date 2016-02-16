@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
  validates :name, presence: true
- validates :description, presence: true
+ validates :description, presence: true  
 
   has_many :orders
   has_many :comments
