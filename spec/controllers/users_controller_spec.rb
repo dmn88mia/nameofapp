@@ -29,6 +29,7 @@ describe UsersController, :type => :controller do
       before { sign_in @user }
       it "redirect_to root_path" do
         get :show, id: @user2.id
+        expect(response).to have_http_status(302) #added this to check if redirect was sucessful
         expect(response).to redirect_to(root_path)
       end
     end
