@@ -3,8 +3,8 @@ require 'rails_helper'
 
 describe UsersController, :type => :controller do
   before do
-    @user = User.create!(email: "dmn88mia@gmail.com", password: "person6776")
-    @user2 = User.create!(email: "dev7nav@gmail.com", password: "person6556")
+    @user = FactoryGirl.create(:user)
+    @user2 = FactoryGirl.create(:user)
   end
 
   describe "GET #show" do
@@ -29,7 +29,6 @@ describe UsersController, :type => :controller do
       before { sign_in @user }
       it "redirect_to root_path" do
         get :show, id: @user2.id
-        expect(response).to have_http_status(302) #added this to check if redirect was sucessful
         expect(response).to redirect_to(root_path)
       end
     end
