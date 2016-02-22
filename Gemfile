@@ -53,6 +53,14 @@ group :production do
   gem 'pg'
 end
 
+group :development do
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'spork-rails'
+  gem 'guard-spork'
+end
+
+
 gem 'devise' 
 gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.0.5'
