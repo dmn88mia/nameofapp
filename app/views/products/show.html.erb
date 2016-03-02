@@ -28,6 +28,11 @@
               <div class="background">
                 <p><%= @product.description %></p>
               </div>
+              <div class="stripe-button">
+                <%= form_tag "/payments/create" do %>
+                 <%= render partial: "shared/stripe_checkout_button" %>
+                <% end %>
+              </div>
             </div>
         </div>    
 
