@@ -5,6 +5,8 @@
 
 <div class="row">
 
+
+
   <% @products.each do |product| %>
     <div class="col-sm-4 col-md-4 margin-top">
       <div class="border-product">
@@ -15,6 +17,7 @@
       <% end %>
         <strong><%= product.price %></strong>
         <h1><%= product.name %></h1>
+        <%# logger.debug "Product: #{product.name}" %>
         <p><%= truncate(product.description, length: 50, omission: '... (continued)') %></p>
         
         <strong><%= link_to 'Show', product, class: 'btn btn-mini btn-default' %></strong> |
