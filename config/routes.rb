@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  post 'payments/create' => 'payments#create'
+  get 'payments/thank_you' => 'payments#thank_you_payment', :as => :thank_you_payment
+
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
   resources :users
 
