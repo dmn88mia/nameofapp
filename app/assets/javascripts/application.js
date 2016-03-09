@@ -19,3 +19,5 @@ $(function() {
             $(this).delay(1500).fadeOut('slow');
             });
         });
+
+console.log("Hello Johnny");

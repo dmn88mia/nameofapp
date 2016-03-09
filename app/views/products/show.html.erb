@@ -8,7 +8,7 @@
             </div>
             <div class="thumbnail">
               <% if @product.image_url.present? %>
-                <%= image_tag(@product.image_url, class: "img-responsive") %>
+                <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, class: "img-zoom") %>
               <% else %>
                 <%= image_tag("http://www.planwallpaper.com/static/images/images-7_kACPBns.jpg", class: "img-responsive") %>
               <% end %>
