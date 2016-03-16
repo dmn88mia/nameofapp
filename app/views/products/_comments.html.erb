@@ -1,9 +1,11 @@
      <div class="row">  <!-- begining of row 3 -->
        <hr class="hr-edit">
         <div class="col-md-12">
+          <h1 class="heading-family">Comments</h1>
+          <%= will_paginate @comments %>
         <div class="product-reviews">
-            <h1 class="heading-family">Comments</h1>
-            <%= will_paginate @comments %>
+            
+            
             <% @comments.each do |comment| %>
 
               <div>
