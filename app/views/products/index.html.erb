@@ -6,29 +6,10 @@
 <div class="row">
 
 
-
-  <% @products.each do |product| %>
-    <div class="col-sm-4 col-md-4 margin-top">
-      <div class="border-product">
-      <% if product.image_url.present? %>
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-      <% else %>
-        <%= image_tag("speedboat", class: "img-responsive") %>
-      <% end %>
-        <strong><%= product.price %></strong>
-        <h1><%= product.name %></h1>
-        <%# logger.debug "Product: #{product.name}" %>
-        <p><%= truncate(product.description, length: 50, omission: '... (continued)') %></p>
-        
-        <strong><%= link_to 'Show', product, class: 'btn btn-mini btn-default' %></strong> |
-        <% if signed_in? && current_user.admin? %>
-          <strong class="btn-override-white"><%= link_to 'Edit', edit_product_path(product), class: 'btn  btn-mini btn-success' %></strong> |
-          <strong class="btn-override-white"><%= link_to 'Destroy', product, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></strong>
-        <% end %>
-      </div>
-    </div><!-- /col -->
-      
+  <% cache(cache_key_for_products) do %>
+    <%= render @products %>
   <% end %>
+
 
 </div>
   <%= link_to 'New Product', new_product_path, class: 'btn btn-mini btn-default' %>

@@ -67,6 +67,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'stripe'
 gem 'rails-html-sanitizer', '~> 1.0', '>= 1.0.3'
 gem 'angularjs-rails'
+gem 'dalli'
 
 
 
