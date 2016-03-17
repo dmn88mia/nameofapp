@@ -68,6 +68,7 @@ gem 'stripe'
 gem 'rails-html-sanitizer', '~> 1.0', '>= 1.0.3'
 gem 'angularjs-rails'
 gem 'dalli'
+gem 'redis-rails'
 
 
 
